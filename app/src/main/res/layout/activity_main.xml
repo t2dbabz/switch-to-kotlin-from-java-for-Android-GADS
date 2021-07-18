@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/colorPrimary"
+		android:minHeight="?attr/actionBarSize"
+		app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:paddingTop="10dp"
+		android:paddingBottom="10dp"
+		android:paddingEnd="30dp"
+		android:paddingStart="30dp">
+
+		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/inputLayoutName"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="30dp">
+
+			<EditText
+				android:id="@+id/etName"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="30dp"
+				android:hint="@string/et_your_name"/>
+
+		</com.google.android.material.textfield.TextInputLayout>
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:onClick="saveName"
+			android:text="@string/btn_save_name"/>
+
+		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/inputLayoutRepoName"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="30dp">
+
+			<EditText
+				android:id="@+id/etRepoName"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="@string/et_repository_search"/>
+		</com.google.android.material.textfield.TextInputLayout>
+
+		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/inputLayoutLanguage"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<EditText
+				android:id="@+id/etLanguage"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="@string/et_language"/>
+		</com.google.android.material.textfield.TextInputLayout>
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:onClick="listRepositories"
+			android:text="@string/btn_search_repositories"/>
+
+		<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/inputLayoutGithubUser"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="30dp">
+
+			<EditText
+				android:id="@+id/etGithubUser"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="@string/et_hint_github_username"/>
+
+		</com.google.android.material.textfield.TextInputLayout>
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:onClick="listUserRepositories"
+			android:text="@string/btn_search_github_user"/>
+
+	</LinearLayout>
+
+</LinearLayout>

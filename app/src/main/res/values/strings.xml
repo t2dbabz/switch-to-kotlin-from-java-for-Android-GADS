@@ -1,0 +1,19 @@
+<resources>
+
+	<string name="app_name">Java To Kotlin Demo</string>
+
+	<string name="drawer_open">Open</string>
+	<string name="drawer_close">Close</string>
+
+	<string name="et_your_name">Your Name</string>
+	<string name="btn_save_name">Save Name</string>
+	<string name="et_repository_search">Repository Search</string>
+	<string name="et_language">Language ( OPTIONAL )</string>
+	<string name="btn_search_repositories">Search Repositories</string>
+	<string name="et_hint_github_username">Github Username</string>
+	<string name="btn_search_github_user">Search Github User Repositories</string>
+
+	<string name="show_bookmarks">Show Bookmarks</string>
+	<string name="browsed_results">Browsed Results</string>
+
+</resources>
