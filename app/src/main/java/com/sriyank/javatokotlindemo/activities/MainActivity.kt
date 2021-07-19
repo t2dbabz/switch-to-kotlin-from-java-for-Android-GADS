@@ -1,5 +1,6 @@
 package com.sriyank.javatokotlindemo.activities
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -26,9 +27,12 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
     }
     /** Save app username in SharedPreference */
-
     fun saveName(view: View){
-
+        val personName = binding.etName.text.toString()
+       val sp = getSharedPreferences(Constants.APP_SHARED_PREFERENCES, Context.MODE_PRIVATE)
+        val editor = sp.edit()
+        editor.putString(Constants.KEY_PERSON_NAME, personName)
+        editor.apply()
     }
 
     /** Search repositories on github after passing data to DisplayActivity  */
@@ -54,7 +58,7 @@ class MainActivity : AppCompatActivity() {
 
 
             val intent = Intent(this@MainActivity, DisplayActivity::class.java)
-            intent.putExtra(Constants.KEY_QUERY_TYPE, Constants.SEARCH_BY_REPO)
+            intent.putExtra(Constants.KEY_QUERY_TYPE, Constants.SEARCH_BY_USER)
             intent.putExtra(Constants.KEY_GITHUB_USER, githubUser)
             startActivity(intent)
         }
